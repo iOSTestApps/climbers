@@ -165,9 +165,12 @@
 		4DB84A151386236E0045113B /* VRope.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DB84A111386236E0045113B /* VRope.mm */; };
 		4DB84A161386236E0045113B /* VStick.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB84A131386236E0045113B /* VStick.m */; };
 		4DBA1A8813862C25005A71DE /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DBA1A8713862C25005A71DE /* Default-Portrait~ipad.png */; };
+		8E5BD01881E872F7F06DDEA6 /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853B8776B3D9D4D0A8A84CDB /* BuddyBuildSDK.framework */; };
+		9C623FF1F6D08C5FFCD656DB /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CFB18910B1F65FDDE4F57E3 /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2CFB18910B1F65FDDE4F57E3 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		4D03D25113861F92006C0453 /* climbers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = climbers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D03D25513861F92006C0453 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4D03D25713861F92006C0453 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -450,6 +453,7 @@
 		4DB84A121386236E0045113B /* VStick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VStick.h; sourceTree = "<group>"; };
 		4DB84A131386236E0045113B /* VStick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VStick.m; sourceTree = "<group>"; };
 		4DBA1A8713862C25005A71DE /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		853B8776B3D9D4D0A8A84CDB /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -465,6 +469,8 @@
 				4D03D26013861F92006C0453 /* UIKit.framework in Frameworks */,
 				4D03D26213861F92006C0453 /* Foundation.framework in Frameworks */,
 				4D03D26413861F92006C0453 /* CoreGraphics.framework in Frameworks */,
+				8E5BD01881E872F7F06DDEA6 /* BuddyBuildSDK.framework in Frameworks */,
+				9C623FF1F6D08C5FFCD656DB /* AssetsLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +512,8 @@
 				4D03D25F13861F92006C0453 /* UIKit.framework */,
 				4D03D26113861F92006C0453 /* Foundation.framework */,
 				4D03D26313861F92006C0453 /* CoreGraphics.framework */,
+				853B8776B3D9D4D0A8A84CDB /* BuddyBuildSDK.framework */,
+				2CFB18910B1F65FDDE4F57E3 /* AssetsLibrary.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -952,6 +960,8 @@
 /* Begin PBXProject section */
 		4D03D24813861F92006C0453 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 4D03D24B13861F92006C0453 /* Build configuration list for PBXProject "climbers" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -1182,6 +1192,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = System/Prefix.pch;
@@ -1200,6 +1214,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = System/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
