@@ -12,6 +12,7 @@
 #import "GameConfig.h"
 #import "Intro.h"
 #import "RootViewController.h"
+#import <BuddyBuildSDK/BuddyBuildSDK.h>
 
 @implementation AppDelegate
 
@@ -40,6 +41,8 @@
 }
 - (void) applicationDidFinishLaunching:(UIApplication*)application
 {
+	[BuddyBuildSDK setup:self];
+	
 	// Init the window
 	window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	
